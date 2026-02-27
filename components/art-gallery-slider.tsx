@@ -14,7 +14,7 @@ import type { Artwork } from "@/types/artwork"
 
 export function ArtGallerySlider() {
   const sliderRef = useRef<HTMLDivElement>(null)
-  const [artworks, setArtworks] = useState<Artwork[]>([])
+  const [artworks, setArtworks] = useState<any[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState("")
   const [windowWidth, setWindowWidth] = useState<number>(0)
