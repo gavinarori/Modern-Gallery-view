@@ -24,7 +24,7 @@ interface UnsplashPhoto {
     id: string
     username: string
     name: string
-    portfolio_url: string | null
+    portfolio_url: string | null | undefined
     profile_image: {
       small: string
       medium: string
@@ -65,7 +65,7 @@ function transformUnsplashPhoto(photo: UnsplashPhoto): Artwork {
     user: {
       name: photo.user.name,
       username: photo.user.username,
-      portfolio_url: photo.user.portfolio_url,
+      portfolio_url: photo.user.portfolio_url ?? undefined,
       profile_image: photo.user.profile_image,
     },
     urls: photo.urls,

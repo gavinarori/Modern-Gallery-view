@@ -10,7 +10,7 @@ import { useColorExtraction, useCurrentColors } from "@/hooks/use-color-extracti
 import type { Artwork } from "@/types/artwork"
 
 export default function ArtDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const [artwork, setArtwork] = useState<Artwork | null>(null)
+  const [artwork, setArtwork] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [resolvedId, setResolvedId] = useState<string>("")
